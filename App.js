@@ -4,9 +4,7 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+
 
 
 const io = require('socket.io')(server, {
