@@ -7,7 +7,7 @@ const server = http.createServer(app);
 app.use((req, res, next) => {
   // Replace 'https://64abd99e9090834482ade6f7--coruscating-beignet-01c9f0.netlify.app/' 
   // with the actual origin from which you are making the request 
-  res.setHeader('Access-Control-Allow-Origin', 'https://64abd99e9090834482ade6f7--coruscating-beignet-01c9f0.netlify.app');
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
