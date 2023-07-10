@@ -9,29 +9,29 @@ app.get('/', (req, res) => {
 })
 
 
-const io = require('socket.io')(server, {
-    cors: {
-      origin: '*',
-    }
-  });
+// const io = require('socket.io')(server, {
+//     cors: {
+//       origin: '*',
+//     }
+//   });
 
-// Define a socket.io connection event
-io.on('connection', (socket) => {
-  console.log('A user connected');
+// // Define a socket.io connection event
+// io.on('connection', (socket) => {
+//   console.log('A user connected');
 
-  // Handle chat message event
-  socket.on('chat message', (message) => {
-    console.log('Received message:', message);
+//   // Handle chat message event
+//   socket.on('chat message', (message) => {
+//     console.log('Received message:', message);
 
-    // Broadcast the message to all connected clients
-    io.emit('chat message', message);
-  });
+//     // Broadcast the message to all connected clients
+//     io.emit('chat message', message);
+//   });
 
-  // Handle disconnect event
-  socket.on('disconnect', () => {
-    console.log('A user disconnected');
-  });
-});
+//   // Handle disconnect event
+//   socket.on('disconnect', () => {
+//     console.log('A user disconnected');
+//   });
+// });
 
 
 
