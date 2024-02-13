@@ -19,7 +19,7 @@ const io = require('socket.io')(server, {
   }
 });
 
-// Define a socket.io connection event
+// Define a socket.io connection events
 io.on('connection', (socket) => {
   console.log('A user connected');
 
